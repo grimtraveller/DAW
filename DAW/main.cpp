@@ -9,7 +9,7 @@
 #include <iostream>
 #include "PulseOsclillator.h"
 
-const ParamVal SampleRate = 44100;
+static const ParamVal SampleRate = 44100;
 int main(int argc, const char * argv[])
 {
     

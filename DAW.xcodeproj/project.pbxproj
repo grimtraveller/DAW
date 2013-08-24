@@ -18,6 +18,8 @@
 		1FDAB8DF17C835D2002D420B /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDAB8DD17C835D2002D420B /* AudioUnit.framework */; };
 		1FDAB8E117C835D7002D420B /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDAB8E017C835D7002D420B /* CoreAudio.framework */; };
 		1FDAB8E917C842FF002D420B /* PulseOsclillator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB8E717C842FF002D420B /* PulseOsclillator.cpp */; };
+		1FDAB8F017C8547D002D420B /* Filter_SVF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB8EE17C8547D002D420B /* Filter_SVF.cpp */; };
+		1FDAB8F317C85A37002D420B /* GainSimple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB8F117C85A36002D420B /* GainSimple.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +57,10 @@
 		1FDAB8E617C84103002D420B /* AudioProccessing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioProccessing.h; sourceTree = "<group>"; };
 		1FDAB8E717C842FF002D420B /* PulseOsclillator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PulseOsclillator.cpp; sourceTree = "<group>"; };
 		1FDAB8E817C842FF002D420B /* PulseOsclillator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulseOsclillator.h; sourceTree = "<group>"; };
+		1FDAB8EE17C8547D002D420B /* Filter_SVF.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Filter_SVF.cpp; sourceTree = "<group>"; };
+		1FDAB8EF17C8547D002D420B /* Filter_SVF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Filter_SVF.h; sourceTree = "<group>"; };
+		1FDAB8F117C85A36002D420B /* GainSimple.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GainSimple.cpp; sourceTree = "<group>"; };
+		1FDAB8F217C85A37002D420B /* GainSimple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GainSimple.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,10 +210,30 @@
 		1FDAB8E517C83EF8002D420B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1FDAB8ED17C853F9002D420B /* Effects */,
+				1FDAB8EB17C853CB002D420B /* Generators */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1FDAB8EB17C853CB002D420B /* Generators */ = {
+			isa = PBXGroup;
+			children = (
 				1FDAB8E717C842FF002D420B /* PulseOsclillator.cpp */,
 				1FDAB8E817C842FF002D420B /* PulseOsclillator.h */,
 			);
-			name = Classes;
+			name = Generators;
+			sourceTree = "<group>";
+		};
+		1FDAB8ED17C853F9002D420B /* Effects */ = {
+			isa = PBXGroup;
+			children = (
+				1FDAB8EE17C8547D002D420B /* Filter_SVF.cpp */,
+				1FDAB8EF17C8547D002D420B /* Filter_SVF.h */,
+				1FDAB8F117C85A36002D420B /* GainSimple.cpp */,
+				1FDAB8F217C85A37002D420B /* GainSimple.h */,
+			);
+			name = Effects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +294,8 @@
 				1FDAB8D217C83549002D420B /* Gain.cpp in Sources */,
 				1FDAB8D717C83580002D420B /* CoreAudioProc.c in Sources */,
 				1FDAB8E917C842FF002D420B /* PulseOsclillator.cpp in Sources */,
+				1FDAB8F017C8547D002D420B /* Filter_SVF.cpp in Sources */,
+				1FDAB8F317C85A37002D420B /* GainSimple.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +392,7 @@
 				1FDAB8C217C83427002D420B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -33,6 +33,7 @@ private:
     ParamVal Period;
     ParamVal PhasorValue;
     ParamVal PhasorTollerance;
+    
 };
 
 #endif /* defined(__DAW__PulseOsclillator__) */

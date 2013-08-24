@@ -17,6 +17,7 @@ PulseOscillator::PulseOscillator(ParamVal* _HostSampleRate)
     
     NoteFrequency = 1000;
     
+    
 
 }
 

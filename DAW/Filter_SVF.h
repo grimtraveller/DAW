@@ -33,6 +33,7 @@ protected:
     ParamVal Delay2;
     ParamVal SampleRate;
     ParamVal Frequency;
+    ParamVal FilterPoleCount;
     
     ParamVal Q;
     FilterState state;

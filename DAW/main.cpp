@@ -7,12 +7,12 @@
 //
 
 #include <iostream>
+#include "PulseOsclillator.h"
 
+const ParamVal SampleRate = 44100;
 int main(int argc, const char * argv[])
 {
-
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    
     return 0;
 }
 

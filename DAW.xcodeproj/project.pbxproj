@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		1FDAB8BB17C83427002D420B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB8BA17C83427002D420B /* main.cpp */; };
 		1FDAB8BD17C83427002D420B /* DAW.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1FDAB8BC17C83427002D420B /* DAW.1 */; };
+		1FDAB8C917C834FB002D420B /* PosixThreadLauncher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB8C817C834FB002D420B /* PosixThreadLauncher.cpp */; };
+		1FDAB8CE17C8353C002D420B /* SVF_Filter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB8CB17C8353C002D420B /* SVF_Filter.cpp */; };
+		1FDAB8CF17C8353C002D420B /* PulseOsc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB8CD17C8353C002D420B /* PulseOsc.cpp */; };
+		1FDAB8D217C83549002D420B /* Gain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB8D117C83549002D420B /* Gain.cpp */; };
+		1FDAB8D717C83580002D420B /* CoreAudioProc.c in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB8D617C83580002D420B /* CoreAudioProc.c */; };
+		1FDAB8DE17C835D2002D420B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDAB8DC17C835D2002D420B /* AudioToolbox.framework */; };
+		1FDAB8DF17C835D2002D420B /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDAB8DD17C835D2002D420B /* AudioUnit.framework */; };
+		1FDAB8E117C835D7002D420B /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDAB8E017C835D7002D420B /* CoreAudio.framework */; };
+		1FDAB8E917C842FF002D420B /* PulseOsclillator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB8E717C842FF002D420B /* PulseOsclillator.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +37,24 @@
 		1FDAB8B717C83427002D420B /* DAW */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DAW; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FDAB8BA17C83427002D420B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1FDAB8BC17C83427002D420B /* DAW.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = DAW.1; sourceTree = "<group>"; };
+		1FDAB8C717C834FB002D420B /* PosixThreadLauncher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PosixThreadLauncher.h; sourceTree = "<group>"; };
+		1FDAB8C817C834FB002D420B /* PosixThreadLauncher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PosixThreadLauncher.cpp; sourceTree = "<group>"; };
+		1FDAB8CA17C8353C002D420B /* SVF_Filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVF_Filter.h; sourceTree = "<group>"; };
+		1FDAB8CB17C8353C002D420B /* SVF_Filter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SVF_Filter.cpp; sourceTree = "<group>"; };
+		1FDAB8CC17C8353C002D420B /* PulseOsc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulseOsc.h; sourceTree = "<group>"; };
+		1FDAB8CD17C8353C002D420B /* PulseOsc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PulseOsc.cpp; sourceTree = "<group>"; };
+		1FDAB8D017C83549002D420B /* Gain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gain.h; sourceTree = "<group>"; };
+		1FDAB8D117C83549002D420B /* Gain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Gain.cpp; sourceTree = "<group>"; };
+		1FDAB8D517C83580002D420B /* CoreAudioProc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreAudioProc.h; sourceTree = "<group>"; };
+		1FDAB8D617C83580002D420B /* CoreAudioProc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CoreAudioProc.c; sourceTree = "<group>"; };
+		1FDAB8DC17C835D2002D420B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		1FDAB8DD17C835D2002D420B /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		1FDAB8E017C835D7002D420B /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		1FDAB8E217C83AD3002D420B /* AudioEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioEntity.h; sourceTree = "<group>"; };
+		1FDAB8E317C83B30002D420B /* AudioTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioTypes.h; sourceTree = "<group>"; };
+		1FDAB8E617C84103002D420B /* AudioProccessing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioProccessing.h; sourceTree = "<group>"; };
+		1FDAB8E717C842FF002D420B /* PulseOsclillator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PulseOsclillator.cpp; sourceTree = "<group>"; };
+		1FDAB8E817C842FF002D420B /* PulseOsclillator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulseOsclillator.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +62,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FDAB8E117C835D7002D420B /* CoreAudio.framework in Frameworks */,
+				1FDAB8DE17C835D2002D420B /* AudioToolbox.framework in Frameworks */,
+				1FDAB8DF17C835D2002D420B /* AudioUnit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +74,9 @@
 		1FDAB8AE17C83427002D420B = {
 			isa = PBXGroup;
 			children = (
+				1FDAB8E017C835D7002D420B /* CoreAudio.framework */,
+				1FDAB8DC17C835D2002D420B /* AudioToolbox.framework */,
+				1FDAB8DD17C835D2002D420B /* AudioUnit.framework */,
 				1FDAB8B917C83427002D420B /* DAW */,
 				1FDAB8B817C83427002D420B /* Products */,
 			);
@@ -60,10 +93,121 @@
 		1FDAB8B917C83427002D420B /* DAW */ = {
 			isa = PBXGroup;
 			children = (
+				1FDAB8C317C8344D002D420B /* Source */,
 				1FDAB8BA17C83427002D420B /* main.cpp */,
 				1FDAB8BC17C83427002D420B /* DAW.1 */,
 			);
 			path = DAW;
+			sourceTree = "<group>";
+		};
+		1FDAB8C317C8344D002D420B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				1FDAB8C617C83494002D420B /* Audio Processing */,
+				1FDAB8C517C83476002D420B /* Audio Driver  */,
+				1FDAB8C417C83464002D420B /* Threading */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1FDAB8C417C83464002D420B /* Threading */ = {
+			isa = PBXGroup;
+			children = (
+				1FDAB8DB17C835B6002D420B /* Current */,
+			);
+			name = Threading;
+			sourceTree = "<group>";
+		};
+		1FDAB8C517C83476002D420B /* Audio Driver  */ = {
+			isa = PBXGroup;
+			children = (
+				1FDAB8D817C83592002D420B /* Core Audio */,
+			);
+			name = "Audio Driver ";
+			sourceTree = "<group>";
+		};
+		1FDAB8C617C83494002D420B /* Audio Processing */ = {
+			isa = PBXGroup;
+			children = (
+				1FDAB8DA17C835AE002D420B /* Current */,
+				1FDAB8D317C8354F002D420B /* Old */,
+				1FDAB8E617C84103002D420B /* AudioProccessing.h */,
+			);
+			name = "Audio Processing";
+			sourceTree = "<group>";
+		};
+		1FDAB8D317C8354F002D420B /* Old */ = {
+			isa = PBXGroup;
+			children = (
+				1FDAB8D017C83549002D420B /* Gain.h */,
+				1FDAB8D117C83549002D420B /* Gain.cpp */,
+				1FDAB8CA17C8353C002D420B /* SVF_Filter.h */,
+				1FDAB8CB17C8353C002D420B /* SVF_Filter.cpp */,
+				1FDAB8CC17C8353C002D420B /* PulseOsc.h */,
+				1FDAB8CD17C8353C002D420B /* PulseOsc.cpp */,
+			);
+			name = Old;
+			sourceTree = "<group>";
+		};
+		1FDAB8D417C83564002D420B /* Old */ = {
+			isa = PBXGroup;
+			children = (
+				1FDAB8D517C83580002D420B /* CoreAudioProc.h */,
+				1FDAB8D617C83580002D420B /* CoreAudioProc.c */,
+			);
+			name = Old;
+			sourceTree = "<group>";
+		};
+		1FDAB8D817C83592002D420B /* Core Audio */ = {
+			isa = PBXGroup;
+			children = (
+				1FDAB8D917C835A7002D420B /* Current */,
+				1FDAB8D417C83564002D420B /* Old */,
+			);
+			name = "Core Audio";
+			sourceTree = "<group>";
+		};
+		1FDAB8D917C835A7002D420B /* Current */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Current;
+			sourceTree = "<group>";
+		};
+		1FDAB8DA17C835AE002D420B /* Current */ = {
+			isa = PBXGroup;
+			children = (
+				1FDAB8E517C83EF8002D420B /* Classes */,
+				1FDAB8E417C83EBA002D420B /* Headers */,
+			);
+			name = Current;
+			sourceTree = "<group>";
+		};
+		1FDAB8DB17C835B6002D420B /* Current */ = {
+			isa = PBXGroup;
+			children = (
+				1FDAB8C717C834FB002D420B /* PosixThreadLauncher.h */,
+				1FDAB8C817C834FB002D420B /* PosixThreadLauncher.cpp */,
+			);
+			name = Current;
+			sourceTree = "<group>";
+		};
+		1FDAB8E417C83EBA002D420B /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				1FDAB8E217C83AD3002D420B /* AudioEntity.h */,
+				1FDAB8E317C83B30002D420B /* AudioTypes.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		1FDAB8E517C83EF8002D420B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1FDAB8E717C842FF002D420B /* PulseOsclillator.cpp */,
+				1FDAB8E817C842FF002D420B /* PulseOsclillator.h */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,6 +262,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FDAB8BB17C83427002D420B /* main.cpp in Sources */,
+				1FDAB8C917C834FB002D420B /* PosixThreadLauncher.cpp in Sources */,
+				1FDAB8CE17C8353C002D420B /* SVF_Filter.cpp in Sources */,
+				1FDAB8CF17C8353C002D420B /* PulseOsc.cpp in Sources */,
+				1FDAB8D217C83549002D420B /* Gain.cpp in Sources */,
+				1FDAB8D717C83580002D420B /* CoreAudioProc.c in Sources */,
+				1FDAB8E917C842FF002D420B /* PulseOsclillator.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

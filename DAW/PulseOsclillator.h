@@ -16,7 +16,7 @@ class PulseOscillator:AudioEntity
 public:
     PulseOscillator(ParamVal* _HostSampleRate);
         
-    Sample ProcessSample(Sample inSample);
+    Sample GenerateSample(ParamVal Frequency);
 
     void SetParameter(ParamVal _value,std::string ParamID);
     ParamVal GetParameter(std::string ParamID);

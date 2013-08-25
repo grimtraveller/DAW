@@ -28,7 +28,7 @@ OSStatus SineWaveRenderProc(void *inRefCon,
     {
         Float32 *data = (Float32*)ioData->mBuffers[0].mData;
         (data)[frame] = (Float32)sin(2 * M_PI *(j / cycleLength));
-        
+     
         data = (Float32*)ioData->mBuffers[1].mData;
         (data)[frame] = (Float32)sin(2 * M_PI * (j / cycleLength));
         

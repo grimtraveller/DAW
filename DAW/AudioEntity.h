@@ -17,6 +17,7 @@ class AudioEntity
 public:
     //Process
     virtual Sample ProcessSample(Sample inSample)=0;
+    virtual Sample GenerateSample(ParamVal Frequency)=0;
     
     //Parameters
     virtual void SetParameter(ParamVal _value, std::string ParamID)=0;//need to figure out implementaion ideas

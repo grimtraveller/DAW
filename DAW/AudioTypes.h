@@ -10,12 +10,12 @@
 #define DAW_AudioTypes_h
 
 #include <ctime>
-
+#include <CoreAudio/CoreAudio.h>
 
 
 typedef struct Sample
 {
-    double Value;
+    Float32 Value;
     clock_t TimeStamp;
 }Sample;
 

@@ -15,7 +15,7 @@ PulseOscillator::PulseOscillator(ParamVal* _HostSampleRate)
     PhasorValue=0;
     PulseWidth=0.5;
     
-    NoteFrequency = 1000;
+    
     
     
 
@@ -23,10 +23,11 @@ PulseOscillator::PulseOscillator(ParamVal* _HostSampleRate)
 
 
 
-Sample PulseOscillator::ProcessSample(Sample inSample)
+Sample PulseOscillator::GenerateSample(ParamVal Frequency)
 {
+    Sample inSample;
     inSample.Value=0;
-    ParamVal period=PulseOscillator::SetupCalcs(this->SampleRate,this->NoteFrequency);
+    ParamVal period=PulseOscillator::SetupCalcs(this->SampleRate,Frequency);
     this->PhasorValue=PulseOscillator::Phasor(period);
     inSample = PulseOscillator::OSCGen(this->PhasorValue, this->PulseWidth);
     

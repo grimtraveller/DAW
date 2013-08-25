@@ -93,7 +93,7 @@ void CreateAndConnectOutputUnit(MySineWavePlayer *player)
     
 }
 
-int Setup()
+void* SetupProc(void* data)
 {
     MySineWavePlayer player = {0};
     

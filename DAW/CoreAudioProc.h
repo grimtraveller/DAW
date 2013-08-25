@@ -38,6 +38,6 @@ static void CheckError(OSStatus error, const char *operation);
 
 void CreateAndConnectOutputUnit(MySineWavePlayer *player);
 
-int Setup();
+void* SetupProc(void* data);
 
 #endif

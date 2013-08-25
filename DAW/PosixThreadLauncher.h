@@ -22,7 +22,7 @@ public:
    
     void LaunchThread(pThreadRoutine ThreadRoutine);
     
-virtual void* Thread_Routine(void* data)=0;
+
 };
 
 #endif /* defined(__threading___PosixThreadLauncher__) */

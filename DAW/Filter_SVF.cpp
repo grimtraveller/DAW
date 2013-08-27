@@ -8,9 +8,9 @@
 
 #include "Filter_SVF.h"
 
-Filter_SVF::Filter_SVF(ParamVal* _SampleRate)
+Filter_SVF::Filter_SVF()
 {
-    SampleRate = *_SampleRate;
+    SampleRate = HostSampleRate;
     Delay1=0;
     Delay2=0;
     Frequency = 1000;

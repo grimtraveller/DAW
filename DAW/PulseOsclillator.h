@@ -14,7 +14,7 @@
 class PulseOscillator:AudioEntity
 {
 public:
-    PulseOscillator(ParamVal* _HostSampleRate);
+    PulseOscillator();
         
     Sample GenerateSample(ParamVal Frequency);
 

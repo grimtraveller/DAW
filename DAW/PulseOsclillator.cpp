@@ -8,9 +8,9 @@
 
 #include "PulseOsclillator.h"
 
-PulseOscillator::PulseOscillator(ParamVal* _HostSampleRate)
+PulseOscillator::PulseOscillator()
 {
-    SampleRate= *_HostSampleRate;
+    SampleRate= HostSampleRate;
     PhasorTollerance=.95;
     PhasorValue=0;
     PulseWidth=0.5;

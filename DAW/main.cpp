@@ -7,14 +7,20 @@
 //
 
 #include <iostream>
-#include <SDL2/SDL.h>
+
+
 
 
 #include "PulseOsclillator.h"
 #include "CoreAudioProc.h"
-#include "PosixThreadLauncher.h"
 
-static const ParamVal SampleRate = 44100;
+#if defined (__APPLE__) & defined(__MACH__)
+
+#include "PosixThreadLauncher.h"
+#include<libkern/OSAtomic.h>
+
+#endif
+
 
 
 

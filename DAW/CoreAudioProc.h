@@ -9,22 +9,23 @@
 #ifndef AudioBasicSineGenerator_CoreAudioProc_h
 #define AudioBasicSineGenerator_CoreAudioProc_h
 
-#include <stdio.h>
-#include <CoreFoundation/CoreFoundation.h>
-#include <AudioToolbox/AudioToolbox.h>
-#include <CoreAudio/CoreAudio.h>
+#include "AudioProccessing.h"   
+#include "CoreaudioUmbrella.h"
 
 
-#define sineFrequency 880.0
+
+
+
+
 
 #pragma mark user-data struct
 
 typedef struct MySineWavePlayer
 {
     AudioUnit outputUnit;
+    UInt32 bufferSize;
     
-    double startingFrameCount;
-    
+        
 } MySineWavePlayer;
 
 OSStatus SineWaveRenderProc(void *inRefCon,

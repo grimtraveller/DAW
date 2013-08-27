@@ -12,6 +12,6 @@
 
 #include "AudioEntity.h"
 #include "AudioTypes.h"
-
+#include "Synth.h"
 
 #endif

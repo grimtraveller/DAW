@@ -19,10 +19,14 @@ OSStatus SineWaveRenderProc(void *inRefCon,
                             UInt32 inNumberFrames,
                             AudioBufferList *ioData)
 {
+
     MySineWavePlayer *player = (MySineWavePlayer*)inRefCon;
     
-    double j = player->startingFrameCount;
-    double cycleLength = 44100./sineFrequency;
+    //synth.process(
+
+    /*double j = player->startingFrameCount;
+    
+    double cycleLength = HostSampleRate/sineFrequency;
     int frame=0;
     for(frame = 0; frame<inNumberFrames; ++frame)
     {
@@ -31,13 +35,8 @@ OSStatus SineWaveRenderProc(void *inRefCon,
      
         data = (Float32*)ioData->mBuffers[1].mData;
         (data)[frame] = (Float32)sin(2 * M_PI * (j / cycleLength));
-        
-        j+=1.0;
-        
-        if(j>cycleLength)
-            j-=cycleLength;
-    }
-    player->startingFrameCount=j;
+    }*/
+
     return noErr;
 }
 
@@ -78,8 +77,12 @@ void CreateAndConnectOutputUnit(MySineWavePlayer *player)
     
     AURenderCallbackStruct input;
     input.inputProc = SineWaveRenderProc;
-    input.inputProcRefCon=&player;
     
+    //add synth to rotating memory
+    //player->synth=*new Synth();
+    
+    input.inputProcRefCon=&player;
+    player->bufferSize=HostBufferSize;
     CheckError(AudioUnitSetProperty(player->outputUnit,
                                     kAudioUnitProperty_SetRenderCallback,
                                     kAudioUnitScope_Input,
@@ -87,7 +90,7 @@ void CreateAndConnectOutputUnit(MySineWavePlayer *player)
                                     &input,
                                     sizeof(input)),
                "AudioUnitSetProperty failed");
-    
+    CheckError(AudioUnitSetProperty(player->outputUnit, kAudioDevicePropertyBufferFrameSize, kAudioUnitScope_Input, 0, &player->bufferSize, sizeof(player->bufferSize)), "Failed To Set Buffer Size");
     CheckError(AudioUnitInitialize(player->outputUnit),
                "Couldn't initialize output unit");
     
@@ -96,6 +99,7 @@ void CreateAndConnectOutputUnit(MySineWavePlayer *player)
 void* SetupProc(void* data)
 {
     MySineWavePlayer player = {0};
+    
     
     CreateAndConnectOutputUnit(&player);
     

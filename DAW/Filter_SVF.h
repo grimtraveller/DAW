@@ -16,7 +16,7 @@ enum FilterState{LowPass=0,BandPass=1,HighPass=2,Notch=3};
 class Filter_SVF:AudioEntity
 {
 public:
-    Filter_SVF(ParamVal* _SampleRate);
+    Filter_SVF();
     
     Sample ProcessSample(Sample inSample);
     

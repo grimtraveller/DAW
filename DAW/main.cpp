@@ -8,6 +8,11 @@
 
 #include <iostream>
 
+#ifdef __APPLE__
+#include <GLUT/glut.h>
+#else
+#include <GL/glut.h>
+#endif
 
 
 
@@ -25,14 +30,14 @@
 
 
 
-int main(int argc, const char * argv[])
+int main(int argc,  char ** argv)
 {
     
     PosixThreadLauncher launcher = *new PosixThreadLauncher();
     pThreadRoutine p = &SetupProc;
     launcher.LaunchThread(p);
     
- 
+         
     
     char c;
         std::cin>>c;

@@ -30,9 +30,9 @@ void PosixThreadLauncher::LaunchThread(pThreadRoutine ThreadRoutine)
         printf("thread error\n\r");//this is not handling the error just telling me there is one
     }
     
-    char message;
+    /*char message;
     returnVal=pthread_join(posixThreadID, (void**)&message);
-    assert(!returnVal);
+    assert(!returnVal);*/
     
     
 }

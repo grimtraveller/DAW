@@ -34,6 +34,7 @@ typedef struct Sample
     }
 
 }Sample;
+
 typedef struct Buffer
 {
     Sample Values[HostBufferSize];
@@ -55,6 +56,7 @@ typedef struct BufferStereo
     Buffer Channel_1;
     Buffer Channel_2;
 }BufferStereo;
+
 typedef double ParamVal;
 
 

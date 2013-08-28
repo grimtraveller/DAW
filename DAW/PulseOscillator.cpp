@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Alexander Zywicki. All rights reserved.
 //
 
-#include "PulseOsclillator.h"
+#include "PulseOscillator.h"
 
 PulseOscillator::PulseOscillator()
 {

@@ -19,7 +19,7 @@
 		1FDAB8DE17C835D2002D420B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDAB8DC17C835D2002D420B /* AudioToolbox.framework */; };
 		1FDAB8DF17C835D2002D420B /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDAB8DD17C835D2002D420B /* AudioUnit.framework */; };
 		1FDAB8E117C835D7002D420B /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDAB8E017C835D7002D420B /* CoreAudio.framework */; };
-		1FDAB8E917C842FF002D420B /* PulseOsclillator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB8E717C842FF002D420B /* PulseOsclillator.cpp */; };
+		1FDAB8E917C842FF002D420B /* PulseOscillator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB8E717C842FF002D420B /* PulseOscillator.cpp */; };
 		1FDAB8F017C8547D002D420B /* Filter_SVF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB8EE17C8547D002D420B /* Filter_SVF.cpp */; };
 		1FDAB8F317C85A37002D420B /* GainSimple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB8F117C85A36002D420B /* GainSimple.cpp */; };
 /* End PBXBuildFile section */
@@ -62,14 +62,14 @@
 		1FDAB8E017C835D7002D420B /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		1FDAB8E217C83AD3002D420B /* AudioEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioEntity.h; sourceTree = "<group>"; };
 		1FDAB8E317C83B30002D420B /* AudioTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioTypes.h; sourceTree = "<group>"; };
-		1FDAB8E617C84103002D420B /* AudioProccessing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioProccessing.h; sourceTree = "<group>"; };
-		1FDAB8E717C842FF002D420B /* PulseOsclillator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PulseOsclillator.cpp; sourceTree = "<group>"; };
-		1FDAB8E817C842FF002D420B /* PulseOsclillator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulseOsclillator.h; sourceTree = "<group>"; };
+		1FDAB8E717C842FF002D420B /* PulseOscillator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PulseOscillator.cpp; sourceTree = "<group>"; };
+		1FDAB8E817C842FF002D420B /* PulseOscillator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulseOscillator.h; sourceTree = "<group>"; };
 		1FDAB8EE17C8547D002D420B /* Filter_SVF.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Filter_SVF.cpp; sourceTree = "<group>"; };
 		1FDAB8EF17C8547D002D420B /* Filter_SVF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Filter_SVF.h; sourceTree = "<group>"; };
 		1FDAB8F117C85A36002D420B /* GainSimple.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GainSimple.cpp; sourceTree = "<group>"; };
 		1FDAB8F217C85A37002D420B /* GainSimple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GainSimple.h; sourceTree = "<group>"; };
-		1FF5112117C98BA300740E68 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = "../../../Library/Developer/Xcode/DerivedData/SDL-caufcxlqgoqzbkfrdbghxlgkfbii/Build/Products/Debug/SDL2.framework"; sourceTree = "<group>"; };
+		1FF93CF617CEA1B6001A5397 /* AudioEntities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioEntities.h; sourceTree = "<group>"; };
+		1FF93CF717CEA291001A5397 /* AudioProccessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioProccessing.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,6 @@
 		1FDAB8AE17C83427002D420B = {
 			isa = PBXGroup;
 			children = (
-				1FF5112117C98BA300740E68 /* SDL2.framework */,
 				1FDAB8E017C835D7002D420B /* CoreAudio.framework */,
 				1FDAB8DC17C835D2002D420B /* AudioToolbox.framework */,
 				1FDAB8DD17C835D2002D420B /* AudioUnit.framework */,
@@ -148,6 +147,7 @@
 		1FDAB8C517C83476002D420B /* Audio Driver  */ = {
 			isa = PBXGroup;
 			children = (
+				1FF93CF817CEA309001A5397 /* ASIO */,
 				1FDAB8D817C83592002D420B /* Core Audio */,
 			);
 			name = "Audio Driver ";
@@ -158,8 +158,7 @@
 			children = (
 				1FDAB8DA17C835AE002D420B /* Current */,
 				1FDAB8D317C8354F002D420B /* Old */,
-				1FDAB8E617C84103002D420B /* AudioProccessing.h */,
-				1F5A6B5417CBF6BC004A5568 /* CoreAudioUmbrella.h */,
+				1FF93CFB17CEA389001A5397 /* Umbrella Headers */,
 			);
 			name = "Audio Processing";
 			sourceTree = "<group>";
@@ -214,8 +213,8 @@
 		1FDAB8DB17C835B6002D420B /* Current */ = {
 			isa = PBXGroup;
 			children = (
-				1FDAB8C717C834FB002D420B /* PosixThreadLauncher.h */,
-				1FDAB8C817C834FB002D420B /* PosixThreadLauncher.cpp */,
+				1FF93CFA17CEA31E001A5397 /* OSX */,
+				1FF93CF917CEA316001A5397 /* Windows */,
 			);
 			name = Current;
 			sourceTree = "<group>";
@@ -242,8 +241,8 @@
 		1FDAB8EB17C853CB002D420B /* Generators */ = {
 			isa = PBXGroup;
 			children = (
-				1FDAB8E717C842FF002D420B /* PulseOsclillator.cpp */,
-				1FDAB8E817C842FF002D420B /* PulseOsclillator.h */,
+				1FDAB8E717C842FF002D420B /* PulseOscillator.cpp */,
+				1FDAB8E817C842FF002D420B /* PulseOscillator.h */,
 			);
 			name = Generators;
 			sourceTree = "<group>";
@@ -257,6 +256,39 @@
 				1FDAB8F217C85A37002D420B /* GainSimple.h */,
 			);
 			name = Effects;
+			sourceTree = "<group>";
+		};
+		1FF93CF817CEA309001A5397 /* ASIO */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ASIO;
+			sourceTree = "<group>";
+		};
+		1FF93CF917CEA316001A5397 /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Windows;
+			sourceTree = "<group>";
+		};
+		1FF93CFA17CEA31E001A5397 /* OSX */ = {
+			isa = PBXGroup;
+			children = (
+				1FDAB8C717C834FB002D420B /* PosixThreadLauncher.h */,
+				1FDAB8C817C834FB002D420B /* PosixThreadLauncher.cpp */,
+			);
+			name = OSX;
+			sourceTree = "<group>";
+		};
+		1FF93CFB17CEA389001A5397 /* Umbrella Headers */ = {
+			isa = PBXGroup;
+			children = (
+				1F5A6B5417CBF6BC004A5568 /* CoreAudioUmbrella.h */,
+				1FF93CF717CEA291001A5397 /* AudioProccessing.h */,
+				1FF93CF617CEA1B6001A5397 /* AudioEntities.h */,
+			);
+			name = "Umbrella Headers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,7 +348,7 @@
 				1FDAB8CF17C8353C002D420B /* PulseOsc.cpp in Sources */,
 				1FDAB8D217C83549002D420B /* Gain.cpp in Sources */,
 				1FDAB8D717C83580002D420B /* CoreAudioProc.cpp in Sources */,
-				1FDAB8E917C842FF002D420B /* PulseOsclillator.cpp in Sources */,
+				1FDAB8E917C842FF002D420B /* PulseOscillator.cpp in Sources */,
 				1FDAB8F017C8547D002D420B /* Filter_SVF.cpp in Sources */,
 				1FDAB8F317C85A37002D420B /* GainSimple.cpp in Sources */,
 				1F5A6B5817CC6AC5004A5568 /* TwoChannelMixer.cpp in Sources */,

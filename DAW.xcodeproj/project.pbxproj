@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F5A6B5317CBF12E004A5568 /* Synth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A6B5117CBF12E004A5568 /* Synth.cpp */; };
 		1F5A6B5817CC6AC5004A5568 /* TwoChannelMixer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A6B5617CC6AC5004A5568 /* TwoChannelMixer.cpp */; };
+		1F5D84D017CD83EA0023C582 /* AudioManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F5D84CE17CD83EA0023C582 /* AudioManager.cpp */; };
 		1FDAB8BB17C83427002D420B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB8BA17C83427002D420B /* main.cpp */; };
 		1FDAB8BD17C83427002D420B /* DAW.1 in Copy Files */ = {isa = PBXBuildFile; fileRef = 1FDAB8BC17C83427002D420B /* DAW.1 */; };
 		1FDAB8C917C834FB002D420B /* PosixThreadLauncher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB8C817C834FB002D420B /* PosixThreadLauncher.cpp */; };
@@ -39,11 +39,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1F5A6B5117CBF12E004A5568 /* Synth.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Synth.cpp; sourceTree = "<group>"; };
-		1F5A6B5217CBF12E004A5568 /* Synth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synth.h; sourceTree = "<group>"; };
 		1F5A6B5417CBF6BC004A5568 /* CoreAudioUmbrella.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreAudioUmbrella.h; sourceTree = "<group>"; };
 		1F5A6B5617CC6AC5004A5568 /* TwoChannelMixer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TwoChannelMixer.cpp; sourceTree = "<group>"; };
 		1F5A6B5717CC6AC5004A5568 /* TwoChannelMixer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoChannelMixer.h; sourceTree = "<group>"; };
+		1F5D84CE17CD83EA0023C582 /* AudioManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AudioManager.cpp; sourceTree = "<group>"; };
+		1F5D84CF17CD83EA0023C582 /* AudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioManager.h; sourceTree = "<group>"; };
 		1FDAB8B717C83427002D420B /* DAW */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DAW; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FDAB8BA17C83427002D420B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1FDAB8BC17C83427002D420B /* DAW.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = DAW.1; sourceTree = "<group>"; };
@@ -91,6 +91,8 @@
 			children = (
 				1F5A6B5617CC6AC5004A5568 /* TwoChannelMixer.cpp */,
 				1F5A6B5717CC6AC5004A5568 /* TwoChannelMixer.h */,
+				1F5D84CE17CD83EA0023C582 /* AudioManager.cpp */,
+				1F5D84CF17CD83EA0023C582 /* AudioManager.h */,
 			);
 			name = HostAudioProc;
 			sourceTree = "<group>";
@@ -240,8 +242,6 @@
 		1FDAB8EB17C853CB002D420B /* Generators */ = {
 			isa = PBXGroup;
 			children = (
-				1F5A6B5117CBF12E004A5568 /* Synth.cpp */,
-				1F5A6B5217CBF12E004A5568 /* Synth.h */,
 				1FDAB8E717C842FF002D420B /* PulseOsclillator.cpp */,
 				1FDAB8E817C842FF002D420B /* PulseOsclillator.h */,
 			);
@@ -319,8 +319,8 @@
 				1FDAB8E917C842FF002D420B /* PulseOsclillator.cpp in Sources */,
 				1FDAB8F017C8547D002D420B /* Filter_SVF.cpp in Sources */,
 				1FDAB8F317C85A37002D420B /* GainSimple.cpp in Sources */,
-				1F5A6B5317CBF12E004A5568 /* Synth.cpp in Sources */,
 				1F5A6B5817CC6AC5004A5568 /* TwoChannelMixer.cpp in Sources */,
+				1F5D84D017CD83EA0023C582 /* AudioManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

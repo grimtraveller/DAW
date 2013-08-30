@@ -12,7 +12,7 @@ AudioManager::AudioManager()
 {
     
 }
-
+PulseOscillator p;
 
 BufferStereo AudioManager::ProcessBufferStereo(void *inRefCon,
                             AudioUnitRenderActionFlags *ioActionFlags,
@@ -22,7 +22,10 @@ BufferStereo AudioManager::ProcessBufferStereo(void *inRefCon,
                             AudioBufferList *ioData)
 {
     BufferStereo b;
-    
+    for (int i=0; i<inNumberFrames; ++i) {
+        b.Channel_1[i] = p.GenerateSample(500);
+        b.Channel_2[i] = b.Channel_1[i];
+    }
     
     
     

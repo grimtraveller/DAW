@@ -13,7 +13,7 @@
 #include <vector>
 
 #include "AudioProccessing.h"
-#include "PulseOscillator.h"
+
 
 #if defined (__APPLE__) & defined(__MACH__)
 #include "CoreAudioUmbrella.h"

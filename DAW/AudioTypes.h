@@ -20,7 +20,7 @@ typedef struct Sample
     float Value;
     clock_t TimeStamp;
     
-    Sample& operator=(Sample& s){return s;}
+    //Sample& operator=(Sample& s){return s;}
     
     Sample& operator=(float v)
     {

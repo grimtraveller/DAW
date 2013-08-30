@@ -38,11 +38,22 @@ BufferStereo AudioEntity::GenerateBufferStereo(ParamVal Frequency)
     return bs;
 }
 
+BufferStereo AudioEntity::GenerateBufferStereo()
+{
+    BufferStereo bs;
+    return bs;
+}
+
 //Parameters
 void AudioEntity::SetParameter(ParamVal _value, std::string ParamID)//need to figure out implementaion ideas
 {
     
 }
+void AudioEntity::SetParameter(ParamVal _value)
+{
+    
+}
+
 ParamVal AudioEntity::GetParameter( std::string ParamID)//same here
 {
     return 0;

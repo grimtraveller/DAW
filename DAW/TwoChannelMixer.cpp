@@ -7,6 +7,12 @@
 //
 
 #include "TwoChannelMixer.h"
+TwoChannelMixer::TwoChannelMixer()
+{
+    Chan1Gain=.5;
+    Chan2Gain=.5;
+    isMono=false;
+}
 TwoChannelMixer::TwoChannelMixer(ParamVal _Chan1Gain,ParamVal _Chan2Gain,bool _isMono)
 {
     Chan1Gain=_Chan1Gain;

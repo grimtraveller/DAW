@@ -13,6 +13,7 @@
 #include <vector>
 
 #include "AudioProccessing.h"
+#include "AudioEntities.h"
 
 
 #if defined (__APPLE__) & defined(__MACH__)

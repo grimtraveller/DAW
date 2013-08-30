@@ -13,7 +13,7 @@ Filter_SVF::Filter_SVF()
     SampleRate = HostSampleRate;
     Delay1=0;
     Delay2=0;
-    Frequency = 1000;
+    Frequency = 500;
     Q=1;
     state=FilterState::LowPass;
     FilterPoleCount=2;

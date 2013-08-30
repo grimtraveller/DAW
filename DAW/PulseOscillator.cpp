@@ -20,7 +20,15 @@ PulseOscillator::PulseOscillator()
 
 }
 
-
+BufferStereo PulseOscillator::GenerateBufferStereo(ParamVal Frequency)
+{
+    BufferStereo buffer;
+    for (int i=0; i<HostBufferSize; ++i) {
+        buffer.Channel_1[i]=GenerateSample(Frequency);
+        buffer.Channel_2[i] = buffer.Channel_1[i];
+    }
+    return buffer;
+}
 
 Sample PulseOscillator::GenerateSample(ParamVal Frequency)
 {

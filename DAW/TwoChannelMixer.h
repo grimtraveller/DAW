@@ -15,6 +15,7 @@
 class TwoChannelMixer:AudioEntity
 {
 public:
+    TwoChannelMixer();
     TwoChannelMixer(ParamVal _Chan1Gain,ParamVal _Chan2Gain,bool _isMono);
     
     BufferStereo ProcessBufferStereo(BufferStereo inBufferChan1,BufferStereo inBufferChan2);

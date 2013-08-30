@@ -10,6 +10,8 @@
 		1F5A6B5817CC6AC5004A5568 /* TwoChannelMixer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A6B5617CC6AC5004A5568 /* TwoChannelMixer.cpp */; };
 		1F5D84D017CD83EA0023C582 /* AudioManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F5D84CE17CD83EA0023C582 /* AudioManager.cpp */; };
 		1F7783C217D0354400BE515F /* AudioEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F7783C117D0354400BE515F /* AudioEntity.cpp */; };
+		1F7783C517D0428500BE515F /* Channel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F7783C317D0428500BE515F /* Channel.cpp */; };
+		1F7783C817D0479A00BE515F /* MasterMixer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F7783C617D0479A00BE515F /* MasterMixer.cpp */; };
 		1FDAB8BB17C83427002D420B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB8BA17C83427002D420B /* main.cpp */; };
 		1FDAB8BD17C83427002D420B /* DAW.1 in Copy Files */ = {isa = PBXBuildFile; fileRef = 1FDAB8BC17C83427002D420B /* DAW.1 */; };
 		1FDAB8C917C834FB002D420B /* PosixThreadLauncher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB8C817C834FB002D420B /* PosixThreadLauncher.cpp */; };
@@ -48,6 +50,10 @@
 		1F5D84CE17CD83EA0023C582 /* AudioManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AudioManager.cpp; sourceTree = "<group>"; };
 		1F5D84CF17CD83EA0023C582 /* AudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioManager.h; sourceTree = "<group>"; };
 		1F7783C117D0354400BE515F /* AudioEntity.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = AudioEntity.cpp; sourceTree = "<group>"; };
+		1F7783C317D0428500BE515F /* Channel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Channel.cpp; sourceTree = "<group>"; };
+		1F7783C417D0428500BE515F /* Channel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Channel.h; sourceTree = "<group>"; };
+		1F7783C617D0479A00BE515F /* MasterMixer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MasterMixer.cpp; sourceTree = "<group>"; };
+		1F7783C717D0479A00BE515F /* MasterMixer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterMixer.h; sourceTree = "<group>"; };
 		1FDAB8B717C83427002D420B /* DAW */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DAW; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FDAB8BA17C83427002D420B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1FDAB8BC17C83427002D420B /* DAW.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = DAW.1; sourceTree = "<group>"; };
@@ -97,12 +103,24 @@
 		1F5A6B5517CC6A92004A5568 /* HostAudioProc */ = {
 			isa = PBXGroup;
 			children = (
-				1F5A6B5617CC6AC5004A5568 /* TwoChannelMixer.cpp */,
-				1F5A6B5717CC6AC5004A5568 /* TwoChannelMixer.h */,
 				1F5D84CE17CD83EA0023C582 /* AudioManager.cpp */,
 				1F5D84CF17CD83EA0023C582 /* AudioManager.h */,
+				1F7783C317D0428500BE515F /* Channel.cpp */,
+				1F7783C417D0428500BE515F /* Channel.h */,
+				1F7783C917D047A300BE515F /* Mixers */,
 			);
 			name = HostAudioProc;
+			sourceTree = "<group>";
+		};
+		1F7783C917D047A300BE515F /* Mixers */ = {
+			isa = PBXGroup;
+			children = (
+				1F5A6B5617CC6AC5004A5568 /* TwoChannelMixer.cpp */,
+				1F5A6B5717CC6AC5004A5568 /* TwoChannelMixer.h */,
+				1F7783C617D0479A00BE515F /* MasterMixer.cpp */,
+				1F7783C717D0479A00BE515F /* MasterMixer.h */,
+			);
+			name = Mixers;
 			sourceTree = "<group>";
 		};
 		1FDAB8AE17C83427002D420B = {
@@ -365,6 +383,8 @@
 				1F5A6B5817CC6AC5004A5568 /* TwoChannelMixer.cpp in Sources */,
 				1F5D84D017CD83EA0023C582 /* AudioManager.cpp in Sources */,
 				1F7783C217D0354400BE515F /* AudioEntity.cpp in Sources */,
+				1F7783C517D0428500BE515F /* Channel.cpp in Sources */,
+				1F7783C817D0479A00BE515F /* MasterMixer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

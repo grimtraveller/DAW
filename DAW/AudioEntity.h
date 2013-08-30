@@ -24,9 +24,12 @@ public:
     
     virtual BufferStereo ProcessBufferStereo(BufferStereo inBufferStereo);
     virtual BufferStereo GenerateBufferStereo(ParamVal Frequency);
+    virtual BufferStereo GenerateBufferStereo();
+
     
     //Parameters
     virtual void SetParameter(ParamVal _value, std::string ParamID);//need to figure out implementaion ideas
+    virtual void SetParameter(ParamVal _value);
     virtual ParamVal GetParameter( std::string ParamID);//same here
     
 };

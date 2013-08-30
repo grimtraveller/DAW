@@ -19,6 +19,8 @@
 
 #include "Filter_SVF.h"
 
+#include "Channel.h"
+
 
 
 #endif

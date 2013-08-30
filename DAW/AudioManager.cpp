@@ -13,7 +13,11 @@ AudioManager::AudioManager()
     
 }
 PulseOscillator p;
-
+PulseOscillator p2;
+TwoChannelMixer t;
+BufferStereo buf;
+float f1=30;
+float f2=33;
 BufferStereo AudioManager::ProcessBufferStereo(void *inRefCon,
                             AudioUnitRenderActionFlags *ioActionFlags,
                             const AudioTimeStamp *inTimeStamp,
@@ -22,14 +26,19 @@ BufferStereo AudioManager::ProcessBufferStereo(void *inRefCon,
                             AudioBufferList *ioData)
 {
     BufferStereo b;
+    BufferStereo l;
     for (int i=0; i<inNumberFrames; ++i) {
-        b.Channel_1[i] = p.GenerateSample(500);
+        b.Channel_1[i] =p.GenerateSample(f1+=0.002);
         b.Channel_2[i] = b.Channel_1[i];
+        l.Channel_1[i] =p2.GenerateSample(f2+=0.002);
+        l.Channel_2[i]=l.Channel_1[i];
+        
+        
     }
+    buf=t.ProcessBufferStereo(b, l);
     
     
-    
-    return b;
+    return buf;
     /*
      double cycleLength = HostSampleRate/sineFrequency;
      int frame=0;

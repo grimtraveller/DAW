@@ -17,7 +17,7 @@ public:
     PulseOscillator();
         
     Sample GenerateSample(ParamVal Frequency);
-
+    BufferStereo GenerateBufferStereo(ParamVal Frequency);
     void SetParameter(ParamVal _value,std::string ParamID);
     ParamVal GetParameter(std::string ParamID);
 protected:

@@ -46,6 +46,14 @@ typedef struct Buffer
         {
             return this->Values[i];
         }
+    Buffer& operator+=(Buffer b)
+    {
+        for(int i =0; i<HostBufferSize; ++i)
+        {
+            Values[i].Value= Values[i].Value + b[i].Value;
+        }
+        return *this;
+    }
         
     
     

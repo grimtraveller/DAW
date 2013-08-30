@@ -18,7 +18,7 @@
 
 #include "PulseOscillator.h"
 #include "CoreAudioProc.h"
-
+#include "GUI_Manager.h"
 #if defined (__APPLE__) & defined(__MACH__)
 
 #include "PosixThreadLauncher.h"
@@ -36,7 +36,7 @@ int main(int argc,  char ** argv)
     PosixThreadLauncher launcher = *new PosixThreadLauncher();
     pThreadRoutine p = &SetupProc;
     launcher.LaunchThread(p);
-    
+    SetupGUI(argc, argv);
          
     
     char c;

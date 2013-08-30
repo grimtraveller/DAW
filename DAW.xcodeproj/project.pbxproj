@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1F5A6B5817CC6AC5004A5568 /* TwoChannelMixer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A6B5617CC6AC5004A5568 /* TwoChannelMixer.cpp */; };
 		1F5D84D017CD83EA0023C582 /* AudioManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F5D84CE17CD83EA0023C582 /* AudioManager.cpp */; };
+		1F7783C217D0354400BE515F /* AudioEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F7783C117D0354400BE515F /* AudioEntity.cpp */; };
 		1FDAB8BB17C83427002D420B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB8BA17C83427002D420B /* main.cpp */; };
 		1FDAB8BD17C83427002D420B /* DAW.1 in Copy Files */ = {isa = PBXBuildFile; fileRef = 1FDAB8BC17C83427002D420B /* DAW.1 */; };
 		1FDAB8C917C834FB002D420B /* PosixThreadLauncher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB8C817C834FB002D420B /* PosixThreadLauncher.cpp */; };
@@ -46,6 +47,7 @@
 		1F5A6B5717CC6AC5004A5568 /* TwoChannelMixer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoChannelMixer.h; sourceTree = "<group>"; };
 		1F5D84CE17CD83EA0023C582 /* AudioManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AudioManager.cpp; sourceTree = "<group>"; };
 		1F5D84CF17CD83EA0023C582 /* AudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioManager.h; sourceTree = "<group>"; };
+		1F7783C117D0354400BE515F /* AudioEntity.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = AudioEntity.cpp; sourceTree = "<group>"; };
 		1FDAB8B717C83427002D420B /* DAW */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DAW; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FDAB8BA17C83427002D420B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1FDAB8BC17C83427002D420B /* DAW.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = DAW.1; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				1FDAB8E217C83AD3002D420B /* AudioEntity.h */,
+				1F7783C117D0354400BE515F /* AudioEntity.cpp */,
 				1FDAB8E317C83B30002D420B /* AudioTypes.h */,
 			);
 			name = Headers;
@@ -361,6 +364,7 @@
 				1FDAB8F317C85A37002D420B /* GainSimple.cpp in Sources */,
 				1F5A6B5817CC6AC5004A5568 /* TwoChannelMixer.cpp in Sources */,
 				1F5D84D017CD83EA0023C582 /* AudioManager.cpp in Sources */,
+				1F7783C217D0354400BE515F /* AudioEntity.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

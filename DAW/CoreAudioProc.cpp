@@ -21,7 +21,20 @@ OSStatus SineWaveRenderProc(void *inRefCon,
 {
 
     MySineWavePlayer *player = (MySineWavePlayer*)inRefCon;
+    BufferStereo b = player->manager.ProcessBufferStereo(inRefCon,
+                                                         ioActionFlags,
+                                                         inTimeStamp,
+                                                         inBusNumber,
+                                                         inNumberFrames,
+                                                         ioData);
     
+    
+    for (int frame = 0; frame<inNumberFrames; ++frame) {
+        Float32 *data = (Float32*)ioData->mBuffers[0].mData;
+        (data)[frame] = (Float32)b.Channel_1[frame].Value;
+        data = (Float32*)ioData->mBuffers[1].mData;
+        (data)[frame] = (Float32)b.Channel_2[frame].Value;
+    }
     //synth.process(
 
     /*double j = player->startingFrameCount;

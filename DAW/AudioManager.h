@@ -13,24 +13,34 @@
 #include <vector>
 
 #include "AudioProccessing.h"
+#include "PulseOscillator.h"
 
 #if defined (__APPLE__) & defined(__MACH__)
 #include "CoreAudioUmbrella.h"
 #endif
 
-class AudioManager:AudioEntity 
-{
+class AudioManager{
+    
+   
 private:
     BufferStereo buffer;
     std::vector<AudioEntity*>Channels; //will house pointers to each channel in the daw.
     
+    
+
+    
 public:
+    #if defined (__APPLE__) & defined(__MACH__)
+    
     BufferStereo ProcessBufferStereo(void *inRefCon,
                          AudioUnitRenderActionFlags *ioActionFlags,
                          const AudioTimeStamp *inTimeStamp,
                          UInt32 inBusNumber,
                          UInt32 inNumberFrames,
                          AudioBufferList *ioData);
+    #endif
 
+    AudioManager();
+    
 };
 #endif /* defined(__DAW__AudioManager__) */

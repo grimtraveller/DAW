@@ -14,8 +14,7 @@ PulseOscillator::PulseOscillator()
     PhasorTollerance=.95;
     PhasorValue=0;
     PulseWidth=0.5;
-    
-    
+
     
     
 

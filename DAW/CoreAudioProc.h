@@ -24,7 +24,7 @@ typedef struct MySineWavePlayer
 {
     AudioUnit outputUnit;
     UInt32 bufferSize;
-    
+    AudioManager manager;
         
 } MySineWavePlayer;
 
@@ -40,5 +40,7 @@ static void CheckError(OSStatus error, const char *operation);
 void CreateAndConnectOutputUnit(MySineWavePlayer *player);
 
 void* SetupProc(void* data);
+
+
 
 #endif

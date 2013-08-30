@@ -8,6 +8,12 @@
 
 #include "AudioManager.h"
 
+AudioManager::AudioManager()
+{
+    
+}
+
+
 BufferStereo AudioManager::ProcessBufferStereo(void *inRefCon,
                             AudioUnitRenderActionFlags *ioActionFlags,
                             const AudioTimeStamp *inTimeStamp,
@@ -15,7 +21,12 @@ BufferStereo AudioManager::ProcessBufferStereo(void *inRefCon,
                             UInt32 inNumberFrames,
                             AudioBufferList *ioData)
 {
+    BufferStereo b;
     
+    
+    
+    
+    return b;
     /*
      double cycleLength = HostSampleRate/sineFrequency;
      int frame=0;

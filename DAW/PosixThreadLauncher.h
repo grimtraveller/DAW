@@ -21,7 +21,7 @@ class PosixThreadLauncher {
 public:
    
     void LaunchThread(pThreadRoutine ThreadRoutine);
-    
+    void LaunchThread(pThreadRoutine ThreadRoutine, void * args);
 
 };
 

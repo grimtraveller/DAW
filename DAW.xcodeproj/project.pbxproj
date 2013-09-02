@@ -220,8 +220,6 @@
 		1FDAB8D417C83564002D420B /* Old */ = {
 			isa = PBXGroup;
 			children = (
-				1FDAB8D517C83580002D420B /* CoreAudioProc.h */,
-				1FDAB8D617C83580002D420B /* CoreAudioProc.cpp */,
 			);
 			name = Old;
 			sourceTree = "<group>";
@@ -238,6 +236,8 @@
 		1FDAB8D917C835A7002D420B /* Current */ = {
 			isa = PBXGroup;
 			children = (
+				1FDAB8D517C83580002D420B /* CoreAudioProc.h */,
+				1FDAB8D617C83580002D420B /* CoreAudioProc.cpp */,
 			);
 			name = Current;
 			sourceTree = "<group>";

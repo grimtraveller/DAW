@@ -20,15 +20,15 @@
 
 #pragma mark user-data struct
 
-typedef struct MySineWavePlayer
+typedef struct DriverStruct
 {
     AudioUnit outputUnit;
     UInt32 bufferSize;
     AudioManager manager;
         
-} MySineWavePlayer;
+} DriverStruct;
 
-OSStatus SineWaveRenderProc(void *inRefCon,
+OSStatus RenderProc(void *inRefCon,
                             AudioUnitRenderActionFlags *ioActionFlags,
                             const AudioTimeStamp *inTimeStamp,
                             UInt32 inBusNumber,
@@ -37,7 +37,7 @@ OSStatus SineWaveRenderProc(void *inRefCon,
 
 static void CheckError(OSStatus error, const char *operation);
 
-void CreateAndConnectOutputUnit(MySineWavePlayer *player);
+void CreateAndConnectOutputUnit(DriverStruct *player);
 
 void* SetupProc(void* data);
 

@@ -12,7 +12,7 @@
 
 #pragma mark callback function
 
-OSStatus SineWaveRenderProc(void *inRefCon,
+OSStatus RenderProc(void *inRefCon,
                             AudioUnitRenderActionFlags *ioActionFlags,
                             const AudioTimeStamp *inTimeStamp,
                             UInt32 inBusNumber,
@@ -20,7 +20,7 @@ OSStatus SineWaveRenderProc(void *inRefCon,
                             AudioBufferList *ioData)
 {
 
-    MySineWavePlayer *player = (MySineWavePlayer*)inRefCon;
+    DriverStruct *player = (DriverStruct*)inRefCon;
     BufferStereo b = player->manager.ProcessBufferStereo(inRefCon,
                                                          ioActionFlags,
                                                          inTimeStamp,
@@ -72,7 +72,7 @@ static void CheckError(OSStatus error, const char *operation) {
     }
 }
 
-void CreateAndConnectOutputUnit(MySineWavePlayer *player)
+void CreateAndConnectOutputUnit(DriverStruct *player)
 {
     AudioComponentDescription outputcd = {0};
     outputcd.componentType = kAudioUnitType_Output;
@@ -89,7 +89,7 @@ void CreateAndConnectOutputUnit(MySineWavePlayer *player)
                "Couldn't open component for outputUnit");
     
     AURenderCallbackStruct input;
-    input.inputProc = SineWaveRenderProc;
+    input.inputProc = RenderProc;
     
     //add synth to rotating memory
     //player->synth=*new Synth();
@@ -111,7 +111,7 @@ void CreateAndConnectOutputUnit(MySineWavePlayer *player)
 
 void* SetupProc(void* data)
 {
-    MySineWavePlayer player = {0};
+    DriverStruct player = {0};
     
     
     CreateAndConnectOutputUnit(&player);

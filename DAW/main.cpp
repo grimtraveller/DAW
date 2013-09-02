@@ -32,12 +32,20 @@
 
 int main(int argc,  char ** argv)
 {
-    
+#ifdef __APPLE__
     PosixThreadLauncher launcher = *new PosixThreadLauncher();
     pThreadRoutine p = &SetupProc;
     launcher.LaunchThread(p);
+    
+#elif _WIN32
+    //launch windows threading and ASIO Driver.
+    
+#endif
+    
+    
     SetupGUI(argc, argv);
-         
+    
+    
     
     char c;
         std::cin>>c;

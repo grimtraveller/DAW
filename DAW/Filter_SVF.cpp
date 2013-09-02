@@ -10,7 +10,7 @@
 
 Filter_SVF::Filter_SVF()
 {
-    SampleRate = HostSampleRate;
+    //SampleRate = HostSampleRate;
     Delay1=0;
     Delay2=0;
     Frequency = 500;
@@ -20,11 +20,22 @@ Filter_SVF::Filter_SVF()
     
     
 }
+
+
+BufferStereo Filter_SVF::ProcessBufferStereo(BufferStereo inBufferStereo)
+{
+    BufferStereo b;
+    for (int i=0; i<HostBufferSize; ++i) {
+        b.Channel_1[i]=ProcessSample(inBufferStereo.Channel_1[i]);
+        b.Channel_2[i]=ProcessSample(inBufferStereo.Channel_2[i]);
+    }
+    return b;
+}
 Sample Filter_SVF::ProcessSample(Sample inSample)
 {
     Q1=1/Q;
-    F1=2*(3.14159)*(Frequency/SampleRate);
-    F1= 2* sinf(3.14159*(Frequency/SampleRate));
+    F1=2*(3.14159)*(Frequency/HostSampleRate);
+    F1= 2* sinf(3.14159*(Frequency/HostSampleRate));
     
     for(int i = 0;i<FilterPoleCount;i++)
     {

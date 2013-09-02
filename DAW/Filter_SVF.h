@@ -19,6 +19,7 @@ public:
     Filter_SVF();
     
     Sample ProcessSample(Sample inSample);
+    BufferStereo ProcessBufferStereo(BufferStereo inBufferStereo);
     
     void SetParameter(ParamVal _value, std::string ParamID);
     ParamVal GetParameter( std::string ParamID);
@@ -31,7 +32,7 @@ protected:
     ParamVal F1;
     ParamVal Delay1;
     ParamVal Delay2;
-    ParamVal SampleRate;
+    //ParamVal SampleRate;
     ParamVal Frequency;
     ParamVal FilterPoleCount;
     

@@ -23,6 +23,7 @@ public:
     virtual Buffer GenerateBuffer(ParamVal Frequency);
     
     virtual BufferStereo ProcessBufferStereo(BufferStereo inBufferStereo);
+    
     virtual BufferStereo GenerateBufferStereo(ParamVal Frequency);
     virtual BufferStereo GenerateBufferStereo();
 

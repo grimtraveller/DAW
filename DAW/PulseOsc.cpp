@@ -61,7 +61,7 @@ float PulseOsc::PulseOscillatorCalc(float PhasorVal,float PW)
     }
 float PulseOsc::SinOscillatorCalc(float PhasorVal)
 {
-    return sinf((2*3.14159)*PhasorVal); // Sin Wave Oscillator. Not Sure If Accurate yet.
+    return (float)sinf((2*3.14159)*PhasorVal); // Sin Wave Oscillator. Not Sure If Accurate yet.
 }
 
 

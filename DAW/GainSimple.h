@@ -11,17 +11,21 @@
 
 #include <iostream>
 #include "AudioProccessing.h"
+
+#define kGainMultMin 0.01
+#define kGainMultMax 10
 class GainSimple:AudioEntity
 {
 public:
     GainSimple();
     Sample ProcessSample(Sample inSample);
+    BufferStereo ProcessBufferStereo(BufferStereo buffer);
     
     void SetParameter(ParamVal _value, std::string ParamID);
     ParamVal GetParameter( std::string ParamID);
 private:
-    const ParamVal kGainMultMin=0.01;
-    const ParamVal kGainMultMax=10;
+    //const ParamVal kGainMultMin=0.01;
+    //const ParamVal kGainMultMax=10;
     
     ParamVal GainMultiplier;
 };

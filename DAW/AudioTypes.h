@@ -65,7 +65,7 @@ typedef struct BufferStereo
     Buffer Channel_2;
 }BufferStereo;
 
-typedef double ParamVal;
+typedef float ParamVal;
 
 
 

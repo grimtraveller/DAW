@@ -32,10 +32,11 @@ BufferStereo AudioEntity::ProcessBufferStereo(BufferStereo inBufferStereo)
 {
     return  inBufferStereo;
 }
+
 BufferStereo AudioEntity::GenerateBufferStereo(ParamVal Frequency)
 {
-    BufferStereo bs;
-    return bs;
+    BufferStereo buff;
+    return buff;
 }
 
 BufferStereo AudioEntity::GenerateBufferStereo()

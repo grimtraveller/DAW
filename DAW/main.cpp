@@ -43,10 +43,10 @@ int main(int argc,  char ** argv)
 #endif
     
     
-    SetupGUI(argc, argv);
+    //SetupGUI(argc, argv);
     
     
-    
+    //launcher.CatchThread(threadID);
     char c;
         std::cin>>c;
         

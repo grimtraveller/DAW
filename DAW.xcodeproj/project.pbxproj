@@ -16,9 +16,6 @@
 		1FDAB8BB17C83427002D420B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB8BA17C83427002D420B /* main.cpp */; };
 		1FDAB8BD17C83427002D420B /* DAW.1 in Copy Files */ = {isa = PBXBuildFile; fileRef = 1FDAB8BC17C83427002D420B /* DAW.1 */; };
 		1FDAB8C917C834FB002D420B /* PosixThreadLauncher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB8C817C834FB002D420B /* PosixThreadLauncher.cpp */; };
-		1FDAB8CE17C8353C002D420B /* SVF_Filter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB8CB17C8353C002D420B /* SVF_Filter.cpp */; };
-		1FDAB8CF17C8353C002D420B /* PulseOsc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB8CD17C8353C002D420B /* PulseOsc.cpp */; };
-		1FDAB8D217C83549002D420B /* Gain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB8D117C83549002D420B /* Gain.cpp */; };
 		1FDAB8D717C83580002D420B /* CoreAudioProc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB8D617C83580002D420B /* CoreAudioProc.cpp */; };
 		1FDAB8DE17C835D2002D420B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDAB8DC17C835D2002D420B /* AudioToolbox.framework */; };
 		1FDAB8DF17C835D2002D420B /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDAB8DD17C835D2002D420B /* AudioUnit.framework */; };
@@ -62,12 +59,6 @@
 		1FDAB8BC17C83427002D420B /* DAW.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = DAW.1; sourceTree = "<group>"; };
 		1FDAB8C717C834FB002D420B /* PosixThreadLauncher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PosixThreadLauncher.h; sourceTree = "<group>"; };
 		1FDAB8C817C834FB002D420B /* PosixThreadLauncher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PosixThreadLauncher.cpp; sourceTree = "<group>"; };
-		1FDAB8CA17C8353C002D420B /* SVF_Filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVF_Filter.h; sourceTree = "<group>"; };
-		1FDAB8CB17C8353C002D420B /* SVF_Filter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SVF_Filter.cpp; sourceTree = "<group>"; };
-		1FDAB8CC17C8353C002D420B /* PulseOsc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulseOsc.h; sourceTree = "<group>"; };
-		1FDAB8CD17C8353C002D420B /* PulseOsc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PulseOsc.cpp; sourceTree = "<group>"; };
-		1FDAB8D017C83549002D420B /* Gain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gain.h; sourceTree = "<group>"; };
-		1FDAB8D117C83549002D420B /* Gain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Gain.cpp; sourceTree = "<group>"; };
 		1FDAB8D517C83580002D420B /* CoreAudioProc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreAudioProc.h; sourceTree = "<group>"; };
 		1FDAB8D617C83580002D420B /* CoreAudioProc.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = CoreAudioProc.cpp; sourceTree = "<group>"; };
 		1FDAB8DC17C835D2002D420B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -207,12 +198,6 @@
 		1FDAB8D317C8354F002D420B /* Old */ = {
 			isa = PBXGroup;
 			children = (
-				1FDAB8D017C83549002D420B /* Gain.h */,
-				1FDAB8D117C83549002D420B /* Gain.cpp */,
-				1FDAB8CA17C8353C002D420B /* SVF_Filter.h */,
-				1FDAB8CB17C8353C002D420B /* SVF_Filter.cpp */,
-				1FDAB8CC17C8353C002D420B /* PulseOsc.h */,
-				1FDAB8CD17C8353C002D420B /* PulseOsc.cpp */,
 			);
 			name = Old;
 			sourceTree = "<group>";
@@ -386,9 +371,6 @@
 			files = (
 				1FDAB8BB17C83427002D420B /* main.cpp in Sources */,
 				1FDAB8C917C834FB002D420B /* PosixThreadLauncher.cpp in Sources */,
-				1FDAB8CE17C8353C002D420B /* SVF_Filter.cpp in Sources */,
-				1FDAB8CF17C8353C002D420B /* PulseOsc.cpp in Sources */,
-				1FDAB8D217C83549002D420B /* Gain.cpp in Sources */,
 				1FDAB8D717C83580002D420B /* CoreAudioProc.cpp in Sources */,
 				1FDAB8E917C842FF002D420B /* PulseOscillator.cpp in Sources */,
 				1FDAB8F017C8547D002D420B /* Filter_SVF.cpp in Sources */,
@@ -416,6 +398,7 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -427,11 +410,13 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_UNROLL_LOOPS = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LLVM_LTO = NO;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
@@ -450,16 +435,19 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_UNROLL_LOOPS = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LLVM_LTO = NO;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = NO;
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
@@ -474,6 +462,8 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/SDL-caufcxlqgoqzbkfrdbghxlgkfbii/Build/Products/Debug\"",
 				);
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -485,6 +475,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/SDL-caufcxlqgoqzbkfrdbghxlgkfbii/Build/Products/Debug\"",
 				);
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

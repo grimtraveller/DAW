@@ -20,8 +20,9 @@ class PosixThreadLauncher {
        
 public:
    
-    void LaunchThread(pThreadRoutine ThreadRoutine);
-    void LaunchThread(pThreadRoutine ThreadRoutine, void * args);
+    pthread_t LaunchThread(pThreadRoutine ThreadRoutine);
+    pthread_t LaunchThread(pThreadRoutine ThreadRoutine, void * args);
+    void CatchThread(pthread_t threadID);
 
 };
 

@@ -11,12 +11,10 @@
 PulseOscillator::PulseOscillator()
 {
     SampleRate= HostSampleRate;
-    PhasorTollerance=.95;
+    PhasorTollerance=1;
     PhasorValue=0;
-    PulseWidth=0.5;
+    PulseWidth=0.5f;
 
-    
-    
 
 }
 
@@ -69,10 +67,12 @@ Sample PulseOscillator::OSCGen(ParamVal PhasorVal,ParamVal _PulseWidth)
     if(PhasorVal<_PulseWidth)
     {
         s.Value = 1;
+        return s;
     }
     else if (PhasorVal>_PulseWidth)
     {
         s.Value = -1;
+        return s;
         
     }
     else s.Value= 0;

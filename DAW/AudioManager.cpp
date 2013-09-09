@@ -7,17 +7,20 @@
 //
 
 #include "AudioManager.h"
-
+#include <ctime>
 AudioManager::AudioManager()
 {
     
 }
 PulseOscillator p;
-PulseOscillator p2;
-TwoChannelMixer t;
-BufferStereo buf;
-float f1=30;
-float f2=33;
+
+
+static BufferStereo buf;
+GainSimple g;
+
+ParamVal f1=1000;
+
+
 BufferStereo AudioManager::ProcessBufferStereo(void *inRefCon,
                             AudioUnitRenderActionFlags *ioActionFlags,
                             const AudioTimeStamp *inTimeStamp,
@@ -25,18 +28,9 @@ BufferStereo AudioManager::ProcessBufferStereo(void *inRefCon,
                             UInt32 inNumberFrames,
                             AudioBufferList *ioData)
 {
-    BufferStereo b;
-    BufferStereo l;
-    for (int i=0; i<inNumberFrames; ++i) {
-        b.Channel_1[i] =p.GenerateSample(f1+=0.002);
-        b.Channel_2[i] = b.Channel_1[i];
-        l.Channel_1[i] =p2.GenerateSample(f2+=0.002);
-        l.Channel_2[i]=l.Channel_1[i];
-        
-        
-    }
-    buf=t.ProcessBufferStereo(b, l);
     
+    buf=p.GenerateBufferStereo(f1);
+    buf=g.ProcessBufferStereo(buf);
     
     return buf;
     /*

@@ -11,7 +11,16 @@
 
 GainSimple::GainSimple()
 {
-    GainMultiplier=1;
+    GainMultiplier=.707f;
+}
+BufferStereo GainSimple::ProcessBufferStereo(BufferStereo buffer)
+{
+    for (int i = 0; i<HostBufferSize; ++i) {
+        buffer.Channel_1[i]=ProcessSample(buffer.Channel_1[i]);
+        buffer.Channel_2[i]=ProcessSample(buffer.Channel_2[i]);
+        
+    }
+    return buffer;
 }
 Sample GainSimple::ProcessSample(Sample inSample)
 {
@@ -21,9 +30,9 @@ Sample GainSimple::ProcessSample(Sample inSample)
     }
     if(GainMultiplier<=kGainMultMin)
     {
-        GainMultiplier=kGainMultMin;
+        GainMultiplier=(float)kGainMultMin;
     }
-    inSample.Value=inSample.Value * GainMultiplier;
+    inSample.Value=inSample.Value * (float)GainMultiplier;
     return inSample;
 }
 

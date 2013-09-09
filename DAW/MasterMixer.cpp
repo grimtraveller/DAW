@@ -10,7 +10,7 @@
 
 MasterMixer::MasterMixer()
 {
-    
+    Gain = 1.0f;
 }
 BufferStereo MasterMixer::GenerateBufferStereo(std::vector<BufferStereo> signals)
 {

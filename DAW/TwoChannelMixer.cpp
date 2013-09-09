@@ -9,8 +9,8 @@
 #include "TwoChannelMixer.h"
 TwoChannelMixer::TwoChannelMixer()
 {
-    Chan1Gain=.5;
-    Chan2Gain=.5;
+    Chan1Gain=.707f;
+    Chan2Gain=.707f;
     isMono=false;
 }
 TwoChannelMixer::TwoChannelMixer(ParamVal _Chan1Gain,ParamVal _Chan2Gain,bool _isMono)
@@ -28,8 +28,7 @@ BufferStereo TwoChannelMixer::ProcessBufferStereo(BufferStereo inBufferChan1, Bu
     for (int i = 0; i<HostBufferSize; ++i) {
         b.Channel_1[i]=(inBufferChan1.Channel_1[i].Value *Chan1Gain) +(inBufferChan2.Channel_1[i].Value * Chan1Gain);
         b.Channel_2[i]=(inBufferChan1.Channel_2[i].Value *Chan2Gain) +(inBufferChan2.Channel_2[i].Value * Chan2Gain);
-        
-        
+       
     }
     
     if(isMono)

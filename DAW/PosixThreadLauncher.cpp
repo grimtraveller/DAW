@@ -8,7 +8,14 @@
 
 #include "PosixThreadLauncher.h"
 
-void PosixThreadLauncher::LaunchThread(pThreadRoutine ThreadRoutine)
+void PosixThreadLauncher::CatchThread(pthread_t threadID)
+{
+    char m = 'T';
+    char* message=&m;
+    pthread_join(threadID, (void**)message);
+}
+
+pthread_t PosixThreadLauncher::LaunchThread(pThreadRoutine ThreadRoutine)
 {
     pthread_attr_t attr;
     pthread_t posixThreadID;
@@ -29,14 +36,14 @@ void PosixThreadLauncher::LaunchThread(pThreadRoutine ThreadRoutine)
         //handle error.
         printf("thread error\n\r");//this is not handling the error just telling me there is one
     }
-    
+    return posixThreadID;
     /*char message;
     returnVal=pthread_join(posixThreadID, (void**)&message);
     assert(!returnVal);*/
     
     
 }
-void PosixThreadLauncher::LaunchThread(pThreadRoutine ThreadRoutine,void * args)
+pthread_t PosixThreadLauncher::LaunchThread(pThreadRoutine ThreadRoutine,void * args)
 {
     pthread_attr_t attr;
     pthread_t posixThreadID;
@@ -57,6 +64,8 @@ void PosixThreadLauncher::LaunchThread(pThreadRoutine ThreadRoutine,void * args)
         //handle error.
         printf("thread error\n\r");//this is not handling the error just telling me there is one
     }
+    
+    return posixThreadID;
     
     /*char message;
      returnVal=pthread_join(posixThreadID, (void**)&message);

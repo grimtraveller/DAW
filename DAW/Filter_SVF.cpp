@@ -15,7 +15,7 @@ Filter_SVF::Filter_SVF()
     Delay2=0;
     Frequency = 500;
     Q=1;
-    state=FilterState::LowPass;
+    state=LowPass;
     FilterPoleCount=2;
     
     
@@ -34,8 +34,8 @@ BufferStereo Filter_SVF::ProcessBufferStereo(BufferStereo inBufferStereo)
 Sample Filter_SVF::ProcessSample(Sample inSample)
 {
     Q1=1/Q;
-    F1=2*(3.14159)*(Frequency/HostSampleRate);
-    F1= 2* sinf(3.14159*(Frequency/HostSampleRate));
+    F1=2*(3.14159f)*(Frequency/HostSampleRate);
+    F1= 2* sinf(3.14159f*(Frequency/HostSampleRate));
     
     for(int i = 0;i<FilterPoleCount;i++)
     {
@@ -50,16 +50,16 @@ Sample Filter_SVF::ProcessSample(Sample inSample)
     
     
     switch (state) {
-        case FilterState::LowPass:
+        case LowPass:
             return output_LowPass;
             break;
-        case FilterState::HighPass:
+        case HighPass:
             return output_HighPass;
             break;
-        case FilterState::BandPass:
+        case BandPass:
             return output_BandPass;
             break;
-        case FilterState::Notch:
+        case Notch:
             return output_Notch;
             break;
         default:

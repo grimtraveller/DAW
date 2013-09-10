@@ -33,6 +33,8 @@ private:
     ParamVal Period;
     ParamVal PhasorValue;
     ParamVal PhasorTollerance;
+    BufferStereo buffer;
+    
     
 };
 

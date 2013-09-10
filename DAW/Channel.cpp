@@ -14,12 +14,12 @@ Channel::Channel()
 }
 
 BufferStereo Channel::GenerateBufferStereo()
-{BufferStereo buff;
-    return buff;
+{
+    return ChannelBuffer;
 }
 
 BufferStereo Channel::ProcessBufferStereo(BufferStereo inBufferStereo)
 {
-    BufferStereo buff;
-    return buff;
+    
+    return ChannelBuffer;
 }

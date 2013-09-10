@@ -24,6 +24,7 @@ typedef struct DriverStruct
 {
     AudioUnit outputUnit;
     UInt32 bufferSize;
+    double SampleRate;
     AudioManager manager;
         
 } DriverStruct;

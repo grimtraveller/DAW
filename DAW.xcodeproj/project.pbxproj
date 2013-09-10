@@ -23,6 +23,8 @@
 		1FDAB8E917C842FF002D420B /* PulseOscillator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB8E717C842FF002D420B /* PulseOscillator.cpp */; };
 		1FDAB8F017C8547D002D420B /* Filter_SVF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB8EE17C8547D002D420B /* Filter_SVF.cpp */; };
 		1FDAB8F317C85A37002D420B /* GainSimple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAB8F117C85A36002D420B /* GainSimple.cpp */; };
+		1FEE2FFF17DFB001003B13C8 /* Parallel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FEE2FFD17DFB001003B13C8 /* Parallel.cpp */; };
+		1FEE300317DFB29C003B13C8 /* SignalPath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FEE300117DFB29B003B13C8 /* SignalPath.cpp */; };
 		1FF93CFD17CEADD5001A5397 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF93CFC17CEADD5001A5397 /* OpenGL.framework */; };
 		1FF93CFF17CEAE52001A5397 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF93CFE17CEAE52001A5397 /* GLUT.framework */; };
 /* End PBXBuildFile section */
@@ -64,7 +66,6 @@
 		1FDAB8DC17C835D2002D420B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		1FDAB8DD17C835D2002D420B /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		1FDAB8E017C835D7002D420B /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
-		1FDAB8E217C83AD3002D420B /* AudioEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioEntity.h; sourceTree = "<group>"; };
 		1FDAB8E317C83B30002D420B /* AudioTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioTypes.h; sourceTree = "<group>"; };
 		1FDAB8E717C842FF002D420B /* PulseOscillator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PulseOscillator.cpp; sourceTree = "<group>"; };
 		1FDAB8E817C842FF002D420B /* PulseOscillator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulseOscillator.h; sourceTree = "<group>"; };
@@ -72,6 +73,11 @@
 		1FDAB8EF17C8547D002D420B /* Filter_SVF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Filter_SVF.h; sourceTree = "<group>"; };
 		1FDAB8F117C85A36002D420B /* GainSimple.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GainSimple.cpp; sourceTree = "<group>"; };
 		1FDAB8F217C85A37002D420B /* GainSimple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GainSimple.h; sourceTree = "<group>"; };
+		1FEE2FFD17DFB001003B13C8 /* Parallel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Parallel.cpp; sourceTree = "<group>"; };
+		1FEE2FFE17DFB001003B13C8 /* Parallel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parallel.h; sourceTree = "<group>"; };
+		1FEE300017DFB088003B13C8 /* AudioEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioEntity.h; sourceTree = "<group>"; };
+		1FEE300117DFB29B003B13C8 /* SignalPath.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SignalPath.cpp; sourceTree = "<group>"; };
+		1FEE300217DFB29B003B13C8 /* SignalPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignalPath.h; sourceTree = "<group>"; };
 		1FF93CF617CEA1B6001A5397 /* AudioEntities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioEntities.h; sourceTree = "<group>"; };
 		1FF93CF717CEA291001A5397 /* AudioProccessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioProccessing.h; sourceTree = "<group>"; };
 		1FF93CFC17CEADD5001A5397 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -101,6 +107,10 @@
 				1F5D84CF17CD83EA0023C582 /* AudioManager.h */,
 				1F7783C317D0428500BE515F /* Channel.cpp */,
 				1F7783C417D0428500BE515F /* Channel.h */,
+				1FEE2FFD17DFB001003B13C8 /* Parallel.cpp */,
+				1FEE2FFE17DFB001003B13C8 /* Parallel.h */,
+				1FEE300117DFB29B003B13C8 /* SignalPath.cpp */,
+				1FEE300217DFB29B003B13C8 /* SignalPath.h */,
 				1F7783C917D047A300BE515F /* Mixers */,
 			);
 			name = HostAudioProc;
@@ -248,7 +258,7 @@
 		1FDAB8E417C83EBA002D420B /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				1FDAB8E217C83AD3002D420B /* AudioEntity.h */,
+				1FEE300017DFB088003B13C8 /* AudioEntity.h */,
 				1F7783C117D0354400BE515F /* AudioEntity.cpp */,
 				1FDAB8E317C83B30002D420B /* AudioTypes.h */,
 			);
@@ -381,6 +391,8 @@
 				1F7783C517D0428500BE515F /* Channel.cpp in Sources */,
 				1F7783C817D0479A00BE515F /* MasterMixer.cpp in Sources */,
 				1FBDAF9D17D0FDB800065AE8 /* GUI_Manager.cpp in Sources */,
+				1FEE2FFF17DFB001003B13C8 /* Parallel.cpp in Sources */,
+				1FEE300317DFB29C003B13C8 /* SignalPath.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

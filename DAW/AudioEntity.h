@@ -15,6 +15,7 @@
 class AudioEntity
 {
 public:
+    
     //Process
     virtual Sample ProcessSample(Sample inSample);
     virtual Sample GenerateSample(ParamVal Frequency);

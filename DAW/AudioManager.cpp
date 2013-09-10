@@ -16,9 +16,9 @@ PulseOscillator p;
 
 
 static BufferStereo buf;
-GainSimple g;
+//GainSimple g;
 
-ParamVal f1=1000;
+ParamVal f1=200.0f;
 
 
 BufferStereo AudioManager::ProcessBufferStereo(void *inRefCon,
@@ -30,7 +30,7 @@ BufferStereo AudioManager::ProcessBufferStereo(void *inRefCon,
 {
     
     buf=p.GenerateBufferStereo(f1);
-    buf=g.ProcessBufferStereo(buf);
+    //buf=g.ProcessBufferStereo(buf);
     
     return buf;
     /*

@@ -7,20 +7,21 @@
 //
 
 #include "PulseOscillator.h"
-
 PulseOscillator::PulseOscillator()
 {
     SampleRate= HostSampleRate;
     PhasorTollerance=1;
     PhasorValue=0;
     PulseWidth=0.5f;
+    
+    
 
 
 }
 
 BufferStereo PulseOscillator::GenerateBufferStereo(ParamVal Frequency)
 {
-    BufferStereo buffer;
+    
     for (int i=0; i<HostBufferSize; ++i) {
         buffer.Channel_1[i]=GenerateSample(Frequency);
         buffer.Channel_2[i] = buffer.Channel_1[i];
@@ -50,13 +51,10 @@ ParamVal PulseOscillator::GetParameter( std::string ParamID)
 
 ParamVal PulseOscillator::Phasor(ParamVal Period)
 {
+    PhasorValue+=Period;
     if(PhasorValue>=PhasorTollerance)
     {
-        PhasorValue=0;
-    }
-    else
-    {
-        PhasorValue+=Period;
+        PhasorValue-=1;
     }
     
     return PhasorValue;
@@ -77,7 +75,10 @@ Sample PulseOscillator::OSCGen(ParamVal PhasorVal,ParamVal _PulseWidth)
     }
     else s.Value= 0;
     
+    //return s;
+    //s.Value=PhasorVal;
     return s;
+    
 }
 
 ParamVal PulseOscillator::SetupCalcs(ParamVal SampleRate,ParamVal Frequency)

@@ -17,8 +17,10 @@ class Channel:AudioEntity
 public:
     Channel();
     
-     BufferStereo ProcessBufferStereo(BufferStereo inBufferStereo);
-     BufferStereo GenerateBufferStereo();
+    BufferStereo ChannelBuffer;
+    
+    BufferStereo ProcessBufferStereo(BufferStereo inBufferStereo);
+    BufferStereo GenerateBufferStereo();
 
 private:
     

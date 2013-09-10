@@ -8,9 +8,10 @@
 
 #include "CoreAudioProc.h"
 
-
+Float32 phi = 0;
 
 #pragma mark callback function
+
 
 OSStatus RenderProc(void *inRefCon,
                             AudioUnitRenderActionFlags *ioActionFlags,
@@ -35,6 +36,37 @@ OSStatus RenderProc(void *inRefCon,
         data = (Float32*)ioData->mBuffers[1].mData;
         (data)[frame] = (Float32)b.Channel_2[frame].Value;
     }
+   
+    
+    /* <TEST TONE>
+    Float32 test[256];
+    
+    for(int i=0;i<256;i++)
+    {
+        test[i]=0.0f;
+        //phi+=0.016f;
+        //if(phi>1)
+        //{
+        //    --phi;
+        //}
+        //test[i]=phi;
+    }
+    for(int i=0;i<64;i++)
+    {
+        test[i]=1.0f;
+    }
+    for(int i=128;i<192;i++)
+    {
+        test[i]=1.0f;
+    }
+    
+    for (int frame = 0; frame<inNumberFrames; ++frame) {
+        Float32 *data = (Float32*)ioData->mBuffers[0].mData;
+        (data)[frame] = test[frame];
+        data = (Float32*)ioData->mBuffers[1].mData;
+        (data)[frame] = test[frame];
+    }
+     </TEST TONE>*/
     //synth.process(
 
     /*double j = player->startingFrameCount;
@@ -96,6 +128,7 @@ void CreateAndConnectOutputUnit(DriverStruct *player)
     
     input.inputProcRefCon=&player;
     player->bufferSize=HostBufferSize;
+    player->SampleRate=HostSampleRate;
     CheckError(AudioUnitSetProperty(player->outputUnit,
                                     kAudioUnitProperty_SetRenderCallback,
                                     kAudioUnitScope_Input,
@@ -103,6 +136,7 @@ void CreateAndConnectOutputUnit(DriverStruct *player)
                                     &input,
                                     sizeof(input)),
                "AudioUnitSetProperty failed");
+    CheckError(AudioUnitSetProperty(player->outputUnit, kAudioUnitProperty_SampleRate, kAudioUnitScope_Input, 0, &player->SampleRate,sizeof(player->SampleRate)), "Failed To Set Sample Rate");
     CheckError(AudioUnitSetProperty(player->outputUnit, kAudioDevicePropertyBufferFrameSize, kAudioUnitScope_Input, 0, &player->bufferSize, sizeof(player->bufferSize)), "Failed To Set Buffer Size");
     CheckError(AudioUnitInitialize(player->outputUnit),
                "Couldn't initialize output unit");

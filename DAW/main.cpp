@@ -22,7 +22,7 @@
 #if defined (__APPLE__) & defined(__MACH__)
 
 #include "PosixThreadLauncher.h"
-#include<libkern/OSAtomic.h>
+//#include<libkern/OSAtomic.h>
 
 #endif
 

@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "DAW/CoreAudioProc.cpp"
-         timestampString = "400533437.751174"
+         timestampString = "400735658.239393"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "147"
-         endingLineNumber = "147"
+         startingLineNumber = "165"
+         endingLineNumber = "165"
          landmarkName = "SetupProc(void* data)"
          landmarkType = "7">
       </FileBreakpoint>
@@ -60,11 +60,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "DAW/CoreAudioProc.cpp"
-         timestampString = "400533437.751174"
+         timestampString = "400735658.239393"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "148"
-         endingLineNumber = "148"
+         startingLineNumber = "166"
+         endingLineNumber = "166"
          landmarkName = "SetupProc(void* data)"
          landmarkType = "7">
       </FileBreakpoint>
@@ -73,11 +73,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "DAW/CoreAudioProc.cpp"
-         timestampString = "400533437.751174"
+         timestampString = "400735658.239393"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "146"
-         endingLineNumber = "146">
+         startingLineNumber = "164"
+         endingLineNumber = "164">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -91,6 +91,19 @@
          endingLineNumber = "22"
          landmarkName = "class Synth"
          landmarkType = "3">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "DAW/CoreAudioProc.cpp"
+         timestampString = "400735658.239393"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "159"
+         endingLineNumber = "159"
+         landmarkName = "CreateAndConnectOutputUnit(DriverStruct *player)"
+         landmarkType = "7">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

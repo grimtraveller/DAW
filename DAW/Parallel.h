@@ -15,7 +15,7 @@ class Parallel:SignalPath
 {
 public:
     SignalPath* InputSignalPaths[MaxChannels];
-    int InputSignalPathCount=0;
+    int InputSignalPathCount;
     BufferStereo OutputBufferStereo;
     
     Parallel();

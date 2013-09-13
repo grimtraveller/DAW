@@ -127,8 +127,25 @@ void CreateAndConnectOutputUnit(DriverStruct *player)
     //player->synth=*new Synth();
     
     input.inputProcRefCon=&player;
-    player->bufferSize=HostBufferSize;
+    player->bufferSize=(UInt32)BufferSize_256;
     player->SampleRate=HostSampleRate;
+    
+    CheckError(AudioUnitSetProperty(player->outputUnit,
+                                    kAudioUnitProperty_SampleRate,
+                                    kAudioUnitScope_Input,
+                                    0,
+                                    &player->SampleRate,
+                                    sizeof(player->SampleRate)),
+               "Failed To Set Sample Rate");
+    
+    CheckError(AudioUnitSetProperty(player->outputUnit,
+                                    kAudioDevicePropertyBufferFrameSize,
+                                    kAudioUnitScope_Output,
+                                    0,
+                                    &player->bufferSize,
+                                    sizeof(player->bufferSize)),
+               "Failed To Set Buffer Size");
+    
     CheckError(AudioUnitSetProperty(player->outputUnit,
                                     kAudioUnitProperty_SetRenderCallback,
                                     kAudioUnitScope_Input,
@@ -136,8 +153,9 @@ void CreateAndConnectOutputUnit(DriverStruct *player)
                                     &input,
                                     sizeof(input)),
                "AudioUnitSetProperty failed");
-    CheckError(AudioUnitSetProperty(player->outputUnit, kAudioUnitProperty_SampleRate, kAudioUnitScope_Input, 0, &player->SampleRate,sizeof(player->SampleRate)), "Failed To Set Sample Rate");
-    CheckError(AudioUnitSetProperty(player->outputUnit, kAudioDevicePropertyBufferFrameSize, kAudioUnitScope_Input, 0, &player->bufferSize, sizeof(player->bufferSize)), "Failed To Set Buffer Size");
+
+    
+    
     CheckError(AudioUnitInitialize(player->outputUnit),
                "Couldn't initialize output unit");
     

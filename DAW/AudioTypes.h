@@ -12,9 +12,28 @@
 #include <ctime>
 
 
-#define HostSampleRate 44100
+//#define HostSampleRate 44100
 #define HostBufferSize 256
 #define MaxChannels 128
+
+
+
+const unsigned int HostSampleRate = 44100;
+
+
+typedef unsigned short  BufferSize;
+
+
+const BufferSize BufferSize_32=32;
+const BufferSize BufferSize_64=64;
+const BufferSize BufferSize_128=128;
+const BufferSize BufferSize_256=256;
+const BufferSize BufferSize_512=512;
+const BufferSize BufferSize_1024=1024;
+
+
+
+
 
 typedef struct Sample
 {

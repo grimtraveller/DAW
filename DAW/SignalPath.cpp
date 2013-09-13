@@ -7,3 +7,8 @@
 //
 
 #include "SignalPath.h"
+
+BufferStereo* SignalPath::ProcessBufferStereo()
+{
+    
+}

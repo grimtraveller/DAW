@@ -13,11 +13,11 @@
 
 
 //#define HostSampleRate 44100
-#define HostBufferSize 256
+//#define HostBufferSize 256
 #define MaxChannels 128
 
 
-
+const unsigned int HostBufferSize=256;
 const unsigned int HostSampleRate = 44100;
 
 

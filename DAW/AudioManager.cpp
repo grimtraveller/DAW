@@ -21,6 +21,8 @@ static BufferStereo buf;
 ParamVal f1=200.0f;
 
 
+
+
 BufferStereo AudioManager::ProcessBufferStereo(void *inRefCon,
                             AudioUnitRenderActionFlags *ioActionFlags,
                             const AudioTimeStamp *inTimeStamp,
@@ -28,9 +30,10 @@ BufferStereo AudioManager::ProcessBufferStereo(void *inRefCon,
                             UInt32 inNumberFrames,
                             AudioBufferList *ioData)
 {
-    
-    buf=p.GenerateBufferStereo(f1);
+    p.GenerateBufferStereo(f1,&buf);
     //buf=g.ProcessBufferStereo(buf);
+    
+    
     
     return buf;
     /*
@@ -45,4 +48,6 @@ BufferStereo AudioManager::ProcessBufferStereo(void *inRefCon,
      data = (Float32*)ioData->mBuffers[1].mData;
      (data)[frame] = (Float32)sin(2 * M_PI * (j / cycleLength));
      }*/
+    
+    
 }

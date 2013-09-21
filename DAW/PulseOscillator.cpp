@@ -13,31 +13,28 @@ PulseOscillator::PulseOscillator()
     PhasorTollerance=1;
     PhasorValue=0;
     PulseWidth=0.5f;
-    
-    
-
 
 }
 
-BufferStereo PulseOscillator::GenerateBufferStereo(ParamVal Frequency)
+BufferStereo PulseOscillator::GenerateBufferStereo(ParamVal Frequency, BufferStereo* inBufferStereo)
 {
     
     for (int i=0; i<HostBufferSize; ++i) {
-        buffer.Channel_1[i]=GenerateSample(Frequency);
-        buffer.Channel_2[i] = buffer.Channel_1[i];
+        inBufferStereo->Channel_1[i]=GenerateSample(Frequency,&inBufferStereo->Channel_1[i]);
+        inBufferStereo->Channel_2[i] = inBufferStereo->Channel_1[i];
     }
-    return buffer;
+    return *inBufferStereo;
 }
 
-Sample PulseOscillator::GenerateSample(ParamVal Frequency)
+Sample PulseOscillator::GenerateSample(ParamVal Frequency,Sample* inSamp)
 {
-    Sample inSample;
-    inSample.Value=0;
+    
+   
     ParamVal period=PulseOscillator::SetupCalcs(this->SampleRate,Frequency);
     this->PhasorValue=PulseOscillator::Phasor(period);
-    inSample = PulseOscillator::OSCGen(this->PhasorValue, this->PulseWidth);
-    
-    return inSample;
+    inSamp = PulseOscillator::OSCGen(this->PhasorValue, this->PulseWidth,inSamp);
+    //inSample.Value=PhasorValue;
+    return *inSamp;
 }
 void PulseOscillator::SetParameter(ParamVal _value, std::string ParamID){
     
@@ -54,30 +51,30 @@ ParamVal PulseOscillator::Phasor(ParamVal Period)
     PhasorValue+=Period;
     if(PhasorValue>=PhasorTollerance)
     {
-        PhasorValue-=1;
+        PhasorValue--;
     }
     
     return PhasorValue;
 }
-Sample PulseOscillator::OSCGen(ParamVal PhasorVal,ParamVal _PulseWidth)
+Sample* PulseOscillator::OSCGen(ParamVal PhasorVal,ParamVal _PulseWidth,Sample* insamp)
 {
-    Sample s;
+    
     if(PhasorVal<_PulseWidth)
     {
-        s.Value = 1;
-        return s;
+        insamp->Value = 1;
+        return insamp;
     }
     else if (PhasorVal>_PulseWidth)
     {
-        s.Value = -1;
-        return s;
+        insamp->Value = -1;
+        return insamp;
         
     }
-    else s.Value= 0;
+    else insamp->Value= 0;
     
     //return s;
     //s.Value=PhasorVal;
-    return s;
+    return insamp;
     
 }
 

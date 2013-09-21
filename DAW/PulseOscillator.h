@@ -16,13 +16,13 @@ class PulseOscillator:AudioEntity
 public:
     PulseOscillator();
         
-    Sample GenerateSample(ParamVal Frequency);
-    BufferStereo GenerateBufferStereo(ParamVal Frequency);
+    Sample GenerateSample(ParamVal Frequency,Sample* inSamp);
+    BufferStereo GenerateBufferStereo(ParamVal Frequency,BufferStereo* inBufferStereo);
     void SetParameter(ParamVal _value,std::string ParamID);
     ParamVal GetParameter(std::string ParamID);
 protected:
     ParamVal Phasor(ParamVal Period);
-    Sample OSCGen(ParamVal PhasorVal,ParamVal _PulseWidth);
+    Sample* OSCGen(ParamVal PhasorVal,ParamVal _PulseWidth,Sample* inSamp);
     
     ParamVal SetupCalcs(ParamVal SampleRate,ParamVal Frequency);
     

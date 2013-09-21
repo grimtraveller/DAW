@@ -19,12 +19,13 @@ public:
     //Process
     virtual Sample ProcessSample(Sample inSample);
     virtual Sample GenerateSample(ParamVal Frequency);
-    
+    virtual Sample GenerateSample(ParamVal Frequency,Sample* inSamp);
     virtual Buffer ProcessBuffer(Buffer inBuffer);
     virtual Buffer GenerateBuffer(ParamVal Frequency);
     
     virtual BufferStereo ProcessBufferStereo(BufferStereo inBufferStereo);
     
+    virtual BufferStereo GenerateBufferStereo(ParamVal Frequency,BufferStereo* inBufferStereo);
     virtual BufferStereo GenerateBufferStereo(ParamVal Frequency);
     virtual BufferStereo GenerateBufferStereo();
 

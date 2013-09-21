@@ -17,7 +17,10 @@ Sample AudioEntity::GenerateSample(ParamVal Frequency)
     Sample s;
     return s;
 }
-
+Sample AudioEntity::GenerateSample(ParamVal Frequency,Sample* inSamp)
+{
+    return *inSamp;
+}
 Buffer AudioEntity::ProcessBuffer(Buffer inBuffer)
 {
     return inBuffer;
@@ -33,12 +36,16 @@ BufferStereo AudioEntity::ProcessBufferStereo(BufferStereo inBufferStereo)
     return  inBufferStereo;
 }
 
+BufferStereo AudioEntity::GenerateBufferStereo(ParamVal Frequency,BufferStereo* inBufferStereo)
+{
+    
+    return *inBufferStereo;;
+}
 BufferStereo AudioEntity::GenerateBufferStereo(ParamVal Frequency)
 {
     BufferStereo buff;
     return buff;
 }
-
 BufferStereo AudioEntity::GenerateBufferStereo()
 {
     BufferStereo bs;

@@ -8,7 +8,7 @@
 
 #include "CoreAudioProc.h"
 
-Float32 phi = 0;
+//Float32 phi = 0;
 
 #pragma mark callback function
 
@@ -140,7 +140,7 @@ void CreateAndConnectOutputUnit(DriverStruct *player)
     
     CheckError(AudioUnitSetProperty(player->outputUnit,
                                     kAudioDevicePropertyBufferFrameSize,
-                                    kAudioUnitScope_Output,
+                                    kAudioUnitScope_Input,
                                     0,
                                     &player->bufferSize,
                                     sizeof(player->bufferSize)),
